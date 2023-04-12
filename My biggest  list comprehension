@@ -1,0 +1,12 @@
+'''
+Q. Given a list of filenames, we want to rename all the files with extension hpp to the extension h. To do this, we would like to generate a new list called newfilenames, consisting of the new filenames. Fill in the blanks in the code using any of the methods you’ve learned thus far, like a for loop or a list comprehension.
+'''
+
+filenames = ["program.c", "stdio.hpp",
+             "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+
+newfilenames = [filenames[x][:filenames[x].rfind(
+    'hpp') + 1] if filenames[x].endswith('hpp') else filenames[x] for x in range(len(filenames))]
+
+
+print(newfilenames)
